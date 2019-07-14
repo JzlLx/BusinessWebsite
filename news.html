@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新闻中心</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		font-size: 12px;
+	}
+	body{
+		background-color: #f5f5f5;
+
+	}
+	.top{
+		width: 100%;
+		height: 27px;
+		background: url(images/top_bg.jpg) repeat-x;
+	}
+	.top_content{
+		width: 1000px;
+        margin: 0 auto;
+	}
+	.top_content li{
+		list-style-image: url(images/li_bg.gif);
+		float: right;
+		width: 70px;
+		line-height: 27px;
+	}
+	.top_content a:link,.top_content a:visited{
+       color: #8e8e8e;
+       text-decoration: none;
+	}
+	.top_content a:hover,.top_content a:active{
+       color: #900;
+       text-decoration: none;
+	}
+	.wrap{
+		width: 1000px;
+		margin: 0 auto;
+	}
+	.logo{
+		height: 80px;
+		background-color: #fff;
+	}
+    .logo_left{
+    	width: 200px;
+    	float: left;
+    }
+    .logo_right{
+    	width: 300px;
+    	float: right;
+    	height: 28px;
+    	margin-top: 29px;
+    	color: #8e8e8e;
+    }
+    .logo_right img{
+    	vertical-align: middle;
+    	margin-right: 4px;
+    }
+    .tel{
+    	font-family:'微软雅黑';
+    	font-size: 16px;
+    	color: #c00;
+    }
+    .nav{
+    height: 40px;
+    float: left;
+    }
+
+    .nav_left{
+    width: 10px;
+    background: url('images/nav_left.jpg')no-repeat;
+    }
+
+    .nav_mid{
+    width: 980px;
+    background: url('images/nav_bg.jpg')repeat-x;
+    }   
+
+    .nav_right{
+    width: 10px;
+    background: url('images/nav_right.jpg')no-repeat;
+
+    }
+
+    .nav_left,.nav_mid,.nav_right{
+    float: left;
+    height: 40px;
+    display: inline;
+    }
+    .nav_mid_left,.nav_mid_right{
+    	float: left;
+    }
+    .nav_mid_left{
+    	width: 680px;
+    }
+    .nav_mid_right{
+    	width: 300px;
+    }
+    .nav_mid_left li{
+    	float: left;
+    	list-style-type: none;
+    	width: 100px;
+    	text-align: center;
+    	line-height: 40px;
+    }
+    .nav_mid_left a:link,.nav_mid_left a:visited{
+        text-decoration: none;
+        font-size: 16px;
+        color: #fff;
+        font-family: '微软雅黑';
+    }
+    .nav_mid_left a:hover,.nav_mid_left a:active{
+        text-decoration: none;
+        font-size: 16px;
+        color: #ff0;
+        font-family: '微软雅黑';
+    }
+    .search_text{
+       width: 190px;
+       height: 25px;
+       margin-top: 5px;
+       background: url(images/search.jpg) no-repeat right center;
+       background-color: #fff; 
+       padding-right: 25px;
+       border: 1px solid #fff;
+    }
+    .ad{
+    	height: 310px; 
+        clear: both;
+    }
+    .ad li{
+    	list-style-type: none;
+    }
+    .main{
+    	height: 250px;
+    	background-color: #fff;
+    	margin-top: 5px;
+    }
+    .news{
+    	width: 340px;
+    	border: 1px solid #8e8e8e;
+    }
+    .course{
+    	width: 410px;
+    	border: 1px solid #8e8e8e;
+    	margin: 0 7px;
+    }
+    .sidebar{
+    	width: 230px;
+    	border: 1px solid #8e8e8e;
+    }
+    .news,.course,.sidebar{
+    	height: 250px;
+    	float: left;
+    }
+    .title{
+    	height: 35px;
+    	border-bottom: 1px solid #8e8e8e;
+    }
+    .title_left{
+    	width: 70%;
+    	font-family: '微软雅黑';
+    	font-size: 14px;
+    	font-weight: bold;
+    	float: left;
+    	color: #786f66;
+    	line-height: 35px;
+    	padding-left: 20px;
+    }
+    .title_right{
+    	width: 20%;
+    	float: right;
+    	line-height: 35px;
+    	text-align: right;
+    	padding-right: 10px;
+    }
+    .title_right a{
+    	text-decoration: none;
+    	color: #999999;
+    }
+    .title_right a:hover{
+    	color: blue;
+    }
+    .pic_news{
+    	height: 80px;
+    	margin-top: 10px;
+    	line-height: 22px;
+    }
+    .pic_news img,.course_pic img{
+        float: left;
+        margin: 0 5px;
+    }
+    .pic_news a,.course_pic a{
+    	color: #c00;
+    	text-decoration: none;
+    }
+    .pic_news a:hover,.course_pic a:hover{
+    	color: blue;
+    }
+    .news_list{
+    	margin-top: 20px;
+    }
+    .news_list li{
+    	list-style-type: none;
+    	background: url(images/list.jpg) no-repeat;
+    	padding-left: 10px;
+    	margin: 8px;
+    	border-bottom: 1px dotted #ccc;
+    }
+    .news_list a,.course_type a{
+    	text-decoration: none;
+    	color: #000;
+    }
+    .news_list a:hover,.course_type a:hover,.copyright_content a:hover{
+    	color: #f00;
+    }
+    .news_list span{
+    	float: right;
+    	color: #999;
+    }
+    .course_pic{
+        height: 120px;
+        margin-top: 10px;
+        line-height: 22px;
+    }
+    .course_type{
+    	height: 37px;
+    	width: 372px;
+    	background: url(images/product_type_bg.jpg) no-repeat;
+    	margin: 20px auto;
+    }
+    .course_type li{
+    	width: 80px;
+    	list-style-type: none;
+    	float: left;
+    	text-align: center;
+    	line-height: 37px;
+    	margin: 0 5px;
+    }
+    .video{
+    	height: 185px;
+    	border: 1px solid #e8e8e8;
+    }
+    .video_content{
+    	height: 150px;
+    }
+    .sidebar_ad{
+    	height: 55px;
+    	border:1px solid #e8e8e8;
+    	margin-top: 5px;
+    }
+    .copyright{
+    	width: 100%;
+    	height: 200px;
+    	background-color: #e8e8e8;
+    	margin-top: 10px;
+    	clear: both;
+    }
+    .copyright_content{
+    	width: 1000px;
+    	margin: 0 auto;
+    	padding-top: 20px;
+    }
+    .copyright_content li{
+    	list-style-type: none;
+    	float: left;
+    	width: 200px;
+    	background: url(images/line.png)no-repeat right center;
+    	text-align:center;
+    	line-height: 30px;
+    	font-family: '微软雅黑';
+    }
+    .copyright_content a{
+    	text-decoration: none;
+    	color:#999;
+    	font-size: 18px;
+    }
+    .copyright_content li ul li a{
+    	font-size: 14px;
+    }
+    .list_main{
+    	min-height: 350px;	
+    	_height:350px;
+    	margin-top: 10px;
+    	background-color: #fff;
+    }
+    .news_type{
+    	height: 350px;
+    	width: 220px;
+    	border:1px solid #e8e8e8;
+    	float: left;
+    }
+    .list_box{
+    	width: 770px;
+    	min-height: 350px;
+    	_height:350px;
+    	border:1px solid #e8e8e8;
+    	float: right;
+    }
+    .news_type h2{
+    	height: 35px;
+    	line-height: 35px;
+    	color: #666;
+    	font-family: '微软雅黑';
+    	font-size: 14px;
+    	background: url(images/titile_bg.gif) repeat-x;
+    	padding-left: 20px;
+    }
+    .news_type_content{
+    	height: 365px;
+    	background: url(images/content_bg.gif) repeat-x;
+    }
+    .news_type_content li{
+    	list-style-type: none;
+    	height: 30px;
+    	line-height: 30px;
+    }
+    .news_type_content li a{
+    	text-decoration: none;
+    	background: url(images/li_bg.gif) no-repeat left center;
+    	color: #666;
+    	padding-left: 15px;
+    	display: block;
+    }
+    .news_type_content li a:hover{
+    	color: #009cdf;
+    	background: url(images/li_bg2.gif) no-repeat left center;
+    	background-color: #f2f2f2;
+    }
+    .list_box h2{
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+        font-family: '微软雅黑';
+        color: #666;
+        background: url(images/type_bg.png) repeat-x;
+        padding-left: 20px;
+    }
+    .page{
+    	height: 40px;
+    	margin-top: 10px;
+    	text-align: center;
+    }
+    .page a{
+    	border: 1px solid #e8e8e8;
+    	padding: 5px 10px;
+    	margin: 5px;
+    	text-decoration: none;
+    	display: inline-block;
+    }
+    .page a:link,.page a:visited{
+    	color: #000;
+    }
+    .page a:hover,.page a:active{
+    	color: #fff;
+    	background-color: #cc1b1b;
+    }
+
+
+	</style>
+	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+    
+
+    </script>
+
+</head>
+<body>
+	<div class="top">
+		<div class="top_content">
+			<ul>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">设为首页</a></li>
+                <li><a href="#">加入收藏</a></li>     
+			</ul>
+		</div>
+	</div> <!--top结束-->
+	<div class="wrap">
+		<div class="logo">
+			<div class="logo_left"><img src="images/logo.jpg" alt="慕课网"></div>
+			<div class="logo_right"><img src="images/tel.jpg" alt="服务热线">24小时服务热线：<span class="tel">123-456-7890</span></div>
+		</div><!--logo结束-->
+     <div class="nav">
+     	<div class="nav_left"> </div>
+     	 <div class="nav_mid">
+          <div class="nav_mid_left">
+          	<ul>
+          		<li><a href="#">首页</a></li>
+          		<li><a href="list.html">关于慕课</a></li>
+          		<li><a href="list.html">新闻动态</a></li>
+          		<li><a href="list.html">课程中心</a></li>
+          		<li><a href="list.html">在线课程</a></li>
+          		<li><a href="list.html">人才招聘</a></li>
+          	</ul>
+          </div>
+          <div class="nav_mid_right">
+          	  <form action="#" method="post">
+          	  	<input type="text"  class="search_text">
+          	  </form>
+          </div>
+     	 </div>
+     	<div class="nav_right"> </div>
+     </div><!--nav结束-->
+    <div class="ad" id="picBox" style="height: 243px;">
+    		<a href="#"><img src="images/ad.jpg"></a>
+    </div><!--ad结束-->
+    
+    <div class="list_main">
+    	<div class="news_type">
+    		<h2>新闻列表</h2>
+    		<div class="news_type_content">
+    			<ul>
+    				<li><a href="list.html">公司新闻</a></li>
+    				<li><a href="list.html">行业新闻</a></li>
+    				<li><a href="list.html">媒体报道</a></li>
+    				<li><a href="list.html">活动专题</a></li>
+    				<li><a href="list.html">精彩视频</a></li>
+    				<li><a href="list.html">资源下载</a></li>
+    				<li><a href="list.html">公司内刊</a></li>
+    			</ul>
+    		</div>
+    	</div><!--news_type结束-->
+
+    	<div class="list_box">
+    		<h2>新闻中心</h2>
+    		<div class="news_list">
+    			<ul>
+    				<li><span>2019-5-13</span><a href="news.html">【慕课访谈】“有为屌丝”在路上</a></li>
+    				<li><span>2019-5-20</span><a href="news.html">【有奖活动】给母亲的三行书信</a></li>
+    				<li><span>2019-6-01</span><a href="news.html">《程序员，晒出你的童年》活动获奖公告</a></li>
+    				<li><span>2019-6-13</span><a href="news.html">【慕课访谈】破茧成蝶——美女程序员的蜕变史</a></li>
+    				<li><span>2019-5-13</span><a href="news.html">【慕课访谈】“有为屌丝”在路上</a></li>
+    				<li><span>2019-5-20</span><a href="news.html">【有奖活动】给母亲的三行书信</a></li>
+    				<li><span>2019-6-01</span><a href="news.html">《程序员，晒出你的童年》活动获奖公告</a></li>
+    				<li><span>2019-6-13</span><a href="news.html">【慕课访谈】破茧成蝶——美女程序员的蜕变史</a></li>
+    				<li><span>2019-5-13</span><a href="news.html">【慕课访谈】“有为屌丝”在路上</a></li>
+    				<li><span>2019-5-20</span><a href="news.html">【有奖活动】给母亲的三行书信</a></li>
+
+    			</ul>
+    		</div><!--news_list结束-->
+    		<div class="page">
+    			<a href="#">首页</a><a href="#"> < </a><a href="#">1</a><a href="#">2</a>
+    			<a href="#">3</a><a href="#">...</a><a href="#">&gt;</a><a href="#">尾页</a>
+    		</div>
+    	</div><!--list_box结束-->
+
+    </div><!--list_main结束-->
+    
+	</div><!--wrap结束-->
+	<div class="copyright">
+		<div class="copyright_content">
+			<ul>
+				<li><a href="#">关于</a>
+                  <ul>
+                  	<li><a href="#">品牌故事</a></li>
+                  	<li><a href="#">联系我们</a></li>
+                  	<li><a href="#">加入我们</a></li>
+                  	<li><a href="#">版权声明</a></li>
+                  </ul>
+				</li>
+				<li><a href="#">课程</a>
+                  <ul>
+                  	<li><a href="#">PHP开发</a></li>
+                  	<li><a href="#">前端开发</a></li>
+                  	<li><a href="#">java开发</a></li>
+                  	<li><a href="#">Android开发</a></li>
+                  </ul>
+				</li>
+				<li><a href="#">留言</a>
+                  <ul>
+                  	<li><a href="#">腾讯微博</a></li>
+                  	<li><a href="#">新浪微博</a></li>
+                  	<li><a href="#">企业微信</a></li>
+                  	<li><a href="#">QQ空间</a></li>
+                  </ul>
+				</li>
+				<li><a href="#">关注</a>
+                  <ul>
+                  	<li><a href="#">意见反馈</a></li>
+                  	<li><a href="#">问题留言</a></li>
+                  	<li><a href="#">媒体联络</a></li>
+                  	<li><a href="#">在线客服</a></li>
+                  </ul>
+				</li>
+				<li><a href="#"><img src="images/weixin.png"/>微信关注</a>
+                   <ul>
+                   	<li><img src="images/qrcode.jpg"></li>
+                   </ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+</body>
+</html>
